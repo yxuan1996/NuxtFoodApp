@@ -3,7 +3,7 @@
     <div class="restaurantheading">
       <h1>Restaurants</h1>
 
-      <!-- <app-select @change="selectedRestaurant = $event" :selectoptions="restaurantOptions" /> -->
+      <app-select @change="selectedRestaurant = $event" :selectoptions="restaurantOptions" />
     </div>
 
     <AppRestaurantInfo :datasource="filteredRestaurants" />
@@ -12,11 +12,11 @@
 
 <script>
 import AppRestaurantInfo from "@/components/AppRestaurantInfo.vue";
-//import AppSelect from "@/components/AppSelect.vue";
+import AppSelect from "@/components/AppSelect.vue";
 import { mapState } from "vuex";
 export default {
   components: {
-    //AppSelect,
+    AppSelect,
     AppRestaurantInfo: () =>
       import(/* webpackPrefetch: true */ "@/components/AppRestaurantInfo.vue"),
   },
